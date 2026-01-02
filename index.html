@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Best Friend Wheel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Best Friend Wheel</h1>
+      <p class="subtitle">
+        Type your name or roll number. If you're in the list, you can spin the wheel to find a random best friend!
+      </p>
+    </header>
+
+    <section class="search-section">
+      <label for="nameInput">Search your name or roll number</label>
+      <input
+        type="text"
+        id="nameInput"
+        placeholder="Example: 12 or Rahul Sharma"
+        autocomplete="off"
+      />
+      <button id="checkBtn">Check name</button>
+      <p id="searchStatus" class="status-text"></p>
+    </section>
+
+    <section class="wheel-section">
+      <div id="wheel" class="wheel disabled">
+        <span>SPIN</span>
+      </div>
+      <p class="hint">
+        Wheel will unlock after we find your name in the list.
+      </p>
+      <button id="spinBtn" class="spin-btn" disabled>Spin the wheel</button>
+    </section>
+
+    <section class="result-section">
+      <h2>Result</h2>
+      <div id="pairResult" class="pair-card hidden">
+        <div class="person">
+          <h3>You</h3>
+          <p id="youRoll"></p>
+          <p id="youName"></p>
+        </div>
+        <div class="person">
+          <h3>Your random best friend</h3>
+          <p id="friendRoll"></p>
+          <p id="friendName"></p>
+        </div>
+      </div>
+      <p id="noResultText" class="status-text"></p>
+    </section>
+
+    <footer>
+      <p>Made just for fun – pairs are random, not serious 😄</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
